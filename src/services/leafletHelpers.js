@@ -141,7 +141,7 @@ angular.module('ui-leaflet').service('leafletHelpers', function ($q, $log, $time
         if(!trapField)
             throw new Error(_errorHeader + 'trapField is undefined');
 
-        trapObj[trapField] = true;
+        // trapObj[trapField] = true;
         let ret = cbToExec();
         $timeout(()=> {
             trapObj[trapField] = false;
