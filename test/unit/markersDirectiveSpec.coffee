@@ -55,7 +55,7 @@ describe 'Directive: leaflet', ->
                     visible: false
 
     afterEach inject ($rootScope) ->
-        $rootScope.$apply()
+        # $rootScope.$apply()
     # Marker
     it 'should create main marker on the map', (done) ->
         main_marker =
@@ -214,7 +214,7 @@ describe 'Directive: leaflet', ->
             label:
                 message: 'original'
                 options:
-                    clickable: true
+                    interactive: true
         angular.extend $rootScope, markers:
             marker: marker
         element = angular.element('<leaflet markers="markers"></leaflet>')
